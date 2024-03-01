@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main_container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://www.websitecdn.com/website-com/website-builder-articles/designing-website/header-body-footer/edges.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .ss_icon {
+    position: fixed;
+    bottom: 70px;
+    right: 70px;
+    background-color: lightblue;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .pop_over {
+    height: 145px;
+    width: 230px;
+    position: fixed;
+    bottom: 80px;
+    right: 82px;
+    background-color: seashell;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px grey;
+  }
+  
+  .close_ticket {
+    position: fixed;
+    bottom: 50px;
+    right: 55px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+    background-color: azure;
+    border-radius: 50%;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  .pop_over > p {
+    font-family: auto;
+    font-size: 14px;
+    padding-block: 8px;
+    padding-right: 40px;
+    color: grey;
+  }
+  
+  .pop_over > button {
+    border-radius: 3px;
+    border: none;
+    width: 220px;
+    background-color: blue;
+    color: #fff;
+    padding: 7px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .options {
+    position: fixed;
+    bottom: 60px;
+    left: 40%;
+    width: 250px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .options > button {
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(45, 15, 50);
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .options > .active {
+    background-color: lightblue;
+  }
+  
+  .modal_container {
+    width: 90vw;
+    background-color: lightgrey;
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .left {
+    width: 66%;
+  }
+  
+  .rigth {
+    width: 34%;
+    padding: 12px;
+    background-color: #fff;
+  }
+  
+  .header {
+    border-bottom: 1px solid grey;
+    padding-top: 15px;
+    padding-left: 18px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    display: flex;
+  }
+  
+  .header_title {
+    margin-top: 7px;
+  }
+  
+  .header .info {
+    margin-left: 30px;
+    padding: 5px;
+    background-color: snow;
+    border-radius: 5px;
+  }
+  
+  .img_div {
+    /* height: 70%; */
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+  
+  .img_div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    padding-block: 9px;
+    background-color: snow;
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
+  
+  .left_actions .draw {
+    padding: 6px;
+    background-color: darkblue;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 21px;
+    margin-right: 17px;
+  }
+  
+  .left_actions .pll_info {
+    padding: 6px;
+    background-color: gainsboro;
+    font-size: 21px;
+    border-radius: 5px;
+    margin-right: 17px;
+    cursor: pointer;
+  }
+  
+  .left_actions .erase {
+    padding: 6px;
+    background-color: gainsboro;
+    font-size: 21px;
+    border-radius: 5px;
+    margin-right: 17px;
+    cursor: pointer;
+  }
+  
+  .left_actions {
+    display: flex;
+  }
+  
+  .rigth_actions {
+    display: flex;
+  }
+  
+  .clear {
+    padding-block: 8px;
+    padding-inline: 15px;
+    background-color: azure;
+    border-radius: 8px;
+    margin-inline: 25px;
+    cursor: pointer;
+    border: 1px solid blue;
+  }
+  
+  .rigth_actions > div {
+    padding: 6px;
+    background-color: gainsboro;
+    font-size: 21px;
+    border-radius: 5px;
+    margin-right: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .issue_type {
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  .bug_btn {
+    padding-inline: 20px;
+    padding-block: 8px;
+    border: 1px solid red;
+    border-radius: 7px;
+    margin-right: 35px;
+  }
+  
+  .enh_btn {
+    padding-inline: 20px;
+    padding-block: 8px;
+    border: 1px solid red;
+    border-radius: 7px;
+  }
+  
+  .fields {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid grey;
+  }
+  
+  .action_btn {
+    margin-top: 25px;
+  }
+  
+  .cancel_btn {
+    padding-inline: 11px;
+    padding-block: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .raise_ticket_btn {
+    margin-left: 25px;
+    padding-inline: 11px;
+    padding-block: 6px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: blue;
+    cursor: pointer;
+  }
+  
