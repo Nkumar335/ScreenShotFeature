@@ -134,6 +134,7 @@ const ScreenShotFeature = () => {
                     setImageUrl={setImageUrl}
                     setShowModal={setShowModal}
                     setShowScreenShotOptions={setShowScreenShotOptions}
+                    isIconVisible={isIconVisible}
                     setIconVisible={setIconVisible}
 
                 />

@@ -7,6 +7,7 @@ function SSOptions({
     setImageUrl,
     setShowModal,
     setShowScreenShotOptions,
+    isIconVisible,
     setIconVisible,
 }) {
     const [active, setActive] = useState(false);
@@ -15,29 +16,38 @@ function SSOptions({
         handleCustomArea();
     };
 
+    async function handleFullScreenSS() {
+        const options = document.querySelector(".options");
+        
+        try {
+            if (options) {
+                options.style.display = "none";
+            }
+            setIconVisible(!isIconVisible);
 
-    function handleFullScreenSS() {
-        const options = document.getElementById("options");
-        if (options) {
-            options.classList.add("hidden");
-        }
-        var canvasPromise = html2canvas(containerRef.current, {
-            useCORS: true
-        });
-        canvasPromise.then((canvas) => {
-            var dataURL = canvas.toDataURL("image/png");
-            var img = new Image();
+            const waitForDOMChanges = () => new Promise(resolve => setTimeout(resolve, 0));
+            await waitForDOMChanges();
+    
+            const canvas = await html2canvas(containerRef.current, {
+                useCORS: true,
+            });
+    
+            const dataURL = canvas.toDataURL("image/png");
+            const img = new Image();
             img.src = dataURL;
             img.download = dataURL;
             setImageUrl(img.src);
             setShowModal(true);
-        });
-        if (options) {
-            options.classList.remove("hidden");
+        } catch (error) {
+            console.error("Error capturing screenshot:", error);
+        } finally {
+    
+            if (options) {
+                options.style.display = "block"; 
+            }
         }
     }
-
-
+    
 
     const handleClose = () => {
         setShowScreenShotOptions(false);
