@@ -6,9 +6,16 @@
   .main_container {
     height: 100vh;
     width: 100vw;
-    background-image: url("https://www.websitecdn.com/website-com/website-builder-articles/designing-website/header-body-footer/edges.webp");
+    background-image: url("https://images-wixmp-530a50041672c69d335ba4cf.wixmp.com/templates/image/cbb65909282227d0f07dc101bdd464c6f5e233a116380027a4d0a7bc42366be51703406917071.jpg/v1/fill/w_944%2Ch_531%2Cq_90%2Cusm_0.60_1.00_0.01/cbb65909282227d0f07dc101bdd464c6f5e233a116380027a4d0a7bc42366be51703406917071.webp");
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .main_container .page_image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   
   .ss_icon {
@@ -78,6 +85,10 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .hide_options{
+    display: none;
+  }
   
   .options > button {
     padding: 5px;
@@ -132,7 +143,6 @@
   }
   
   .img_div {
-    /* height: 70%; */
     padding-right: 15px;
     padding-top: 20px;
     padding-bottom: 10px;

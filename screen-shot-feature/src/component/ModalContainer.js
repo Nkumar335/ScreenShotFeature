@@ -12,8 +12,8 @@ import { FieldWrapper, Label, InputField, TextArea } from "./styles";
 import useTicketRaise from "./hooks/useTicketRaise";
 import { IMPACT_OPTIONS, SECTION_OPTIONS, SUB_SECTION_OPTIONS } from "./options";
 
-function ModalContainer({ showModal, setShowModal, croppedImageUrl }) {
-  const { data, handleChange, handleRaiseTicket } = useTicketRaise();
+function ModalContainer({ showModal, setShowModal, imageUrl }) {
+  const { data, handleChange, handleRaiseTicket } = useTicketRaise({setShowModal});
 
   const handleCancel = () => {
     setShowModal(false);
@@ -31,7 +31,7 @@ function ModalContainer({ showModal, setShowModal, croppedImageUrl }) {
               </div>
             </div>
             <div className="img_div">
-              <img src="https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=" alt="not found"/>
+              <img src= {imageUrl} alt="screen not captured"/>
             </div>
             <div className="footer">
               <div className="actions">

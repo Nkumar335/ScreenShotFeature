@@ -2,7 +2,7 @@ import { useState } from "react";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const useTicketRaise = (initialData) => {
+const useTicketRaise = ({setShowModal =() => {}}) => {
   const [data, setData] = useState({
     impacts: "",
     title: "",
@@ -19,13 +19,15 @@ const useTicketRaise = (initialData) => {
   };
 
   const handleRaiseTicket = () => {
-    if(data.title === '' || data.description === ''){
+    if(!data.title  || !data.description){
       toast.warn('Please fill all Fields', { position: 'top-center' });
       return;
     }
 
     console.log("Submitted Data", data);
+    setShowModal(false);
     toast.success('Ticket Raise Successfully', { position: 'top-center' });
+    
   };
 
   return {
